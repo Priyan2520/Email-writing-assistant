@@ -1,0 +1,296 @@
+.main {
+  min-height: 100vh;
+  background: #0a0a0f;
+  color: #e8e6e0;
+  font-family: 'Georgia', serif;
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 80px;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 10%, rgba(94, 60, 196, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 80% 80%, rgba(196, 100, 60, 0.10) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding-bottom: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoIcon {
+  color: #c4783c;
+  font-size: 18px;
+}
+
+.logoText {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #e8e6e0;
+  font-family: 'Georgia', serif;
+}
+
+.logoBadge {
+  background: #5e3cc4;
+  color: #fff;
+  font-size: 10px;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.08em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+.adminLink {
+  color: rgba(232, 230, 224, 0.4);
+  text-decoration: none;
+  font-size: 13px;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+.adminLink:hover { color: #c4783c; }
+
+/* ── Hero ── */
+.hero {
+  padding: 60px 0 48px;
+}
+
+.title {
+  font-size: clamp(36px, 6vw, 56px);
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  margin: 0 0 16px;
+  color: #e8e6e0;
+}
+
+.titleAccent {
+  font-style: italic;
+  color: #c4783c;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: rgba(232, 230, 224, 0.5);
+  line-height: 1.6;
+  font-family: 'Courier New', monospace;
+  font-style: normal;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+/* ── Card ── */
+.card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  backdrop-filter: blur(10px);
+}
+
+/* ── Chips ── */
+.chipGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chipLabel {
+  font-size: 11px;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(232, 230, 224, 0.35);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 7px 14px;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: transparent;
+  color: rgba(232, 230, 224, 0.55);
+  font-size: 13px;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  line-height: 1;
+}
+
+.chip:hover {
+  border-color: rgba(255,255,255,0.2);
+  color: #e8e6e0;
+}
+
+.chipActive {
+  background: #5e3cc4;
+  border-color: #5e3cc4;
+  color: #fff;
+}
+
+/* ── Textarea ── */
+.inputWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.textarea {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  color: #e8e6e0;
+  font-size: 15px;
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  padding: 14px 16px;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.textarea::placeholder { color: rgba(232, 230, 224, 0.2); }
+.textarea:focus { border-color: rgba(94, 60, 196, 0.5); }
+
+/* ── Form bottom row ── */
+.formBottom {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.select {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  color: rgba(232, 230, 224, 0.7);
+  font-size: 13px;
+  font-family: 'Courier New', monospace;
+  padding: 10px 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.generateBtn {
+  flex: 1;
+  background: #5e3cc4;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 24px;
+  font-size: 15px;
+  font-family: 'Georgia', serif;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.generateBtn:hover:not(:disabled) { background: #4e2eb4; }
+.generateBtn:active:not(:disabled) { transform: scale(0.98); }
+.generateBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btnArrow { font-size: 17px; }
+
+.spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+  font-size: 18px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Output ── */
+.outputCard {
+  margin-top: 20px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(196, 120, 60, 0.25);
+  border-radius: 16px;
+  overflow: hidden;
+  animation: fadeUp 0.3s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.outputHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: rgba(196, 120, 60, 0.06);
+}
+
+.outputTitle {
+  font-size: 12px;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c4783c;
+}
+
+.copyBtn {
+  background: transparent;
+  border: 1px solid rgba(196, 120, 60, 0.4);
+  color: #c4783c;
+  font-size: 12px;
+  font-family: 'Courier New', monospace;
+  padding: 5px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.copyBtn:hover { background: rgba(196, 120, 60, 0.1); }
+
+.outputText {
+  padding: 20px;
+  font-size: 14px;
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: rgba(232, 230, 224, 0.85);
+  margin: 0;
+}
